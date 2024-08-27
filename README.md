@@ -1,6 +1,6 @@
 # Multi-Step Application Form
 
-This document describes a Multi-Step Application Form built with React and styled using Tailwind CSS. The form allows users to select a plan, choose payment frequency (monthly or yearly), and add optional add-ons. Users can navigate between steps and update their choices as needed.
+Multi-Step Application Form is built with React and styled using Tailwind CSS. The form allows users to select a plan, choose payment frequency (monthly or yearly), and add optional add-ons. Users can navigate between steps and update their choices as needed.
 
 ## Features
 
