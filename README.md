@@ -33,7 +33,7 @@ git clone https://github.com/pallavimshr/Multi-Step-Form
 Change to the project directory with:
 
 ```bash
-cd assgt-fantv
+cd Multi-Step-Form
 ```
 ### Install Dependencies
 
