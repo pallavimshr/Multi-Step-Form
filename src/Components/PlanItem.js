@@ -18,7 +18,7 @@ const PlanItem = ({ name, monthlyPrice, imageSource, yearlyPrice, isYearly, isSe
                   {name}
               </div>
               <div className="text-sm text-gray-600">
-              {`+$ ${isYearly ? yearlyPrice :monthlyPrice}`}
+              {`$ ${isYearly ? yearlyPrice :monthlyPrice}`}
               {isYearly ? '/yr' : '/mo'}
               </div>
           </div>
