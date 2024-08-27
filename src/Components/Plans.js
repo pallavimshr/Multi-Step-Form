@@ -1,14 +1,14 @@
 import PlanItem from "./PlanItem";
 import { planData } from "../utils/data";
 import Switch from '@mui/material/Switch';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import { useOutletContext } from "react-router-dom";
 
 const Plans = () => {
     const { formData, handleFormDataChange } = useOutletContext();
     const [isYearly, setIsYearly] = useState(false);
-    const [selectedPlan, setSelectedPlan] = useState(formData);
+    const [selectedPlan, setSelectedPlan] = useState(null);
     const [warning, setWarning] = useState("");
     
     const navigate = useNavigate();
@@ -16,12 +16,6 @@ const Plans = () => {
     const handleSwitchChange = (event) => {
         setIsYearly(event.target.checked);
     };
-
-    const handlePlanSelect = (plan) => {
-        setSelectedPlan(plan);
-        setWarning(""); 
-    };
-
     const handleNextStep = () => {
         if (selectedPlan) {
             handleFormDataChange({
@@ -35,6 +29,23 @@ const Plans = () => {
             setWarning("Please select a plan before proceeding.");
         }
     };
+    const handlePlanSelect = (plan) => {
+        setSelectedPlan(plan);
+        setWarning(""); 
+    };
+    useEffect(() => {
+        if (formData && formData.pName) {
+            setSelectedPlan({
+                pName: formData.pName,
+                pMonthlyPrice: formData.pMonthlyPrice,
+                pYearlyPrice: formData.pYearlyPrice
+            });
+            setIsYearly(formData.isYearly);
+        }
+    }, [formData]);
+     
+
+    
     
     return (
         <div className="w-full h-full bg-white flex flex-col">
