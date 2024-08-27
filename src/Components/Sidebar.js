@@ -29,10 +29,10 @@ const Sidebar = () => {
           <li key={index} className="flex items-start" 
            onClick={() => handleNavigation(item.path)}>
             
-            <div className={`flex items-center justify-center w-12 h-12 m-4 font-semibold text-lg border-2 rounded-full mr-3 ${location.pathname === item.path ? 'bg-blue-300 border-blue-300 text-blue-800' : 'bg-transparent border-white text-white'}`}>
+            <div className={`flex items-center justify-center w-full md:w-12 h-12 m-4 font-semibold text-lg border-2 rounded-full mr-3 ${location.pathname === item.path ? 'bg-blue-300 border-blue-300 text-blue-800' : 'bg-transparent border-white text-white'}`}>
               {item.number}
             </div>
-            <div>
+            <div className="hidden md:block">
               
               <p className="text-sm text-white mt-4 ">{item.step}</p>
               

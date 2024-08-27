@@ -37,11 +37,11 @@ function App() {
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
       <div className="flex w-1/2 h-2/3 bg-white rounded-lg shadow-md">
-        <div className="w-1/3 p-4 rounded-lg h-full">
+        <div className="w-1/5 md:w-1/3 p-4 rounded-lg h-full">
           <Sidebar />
         </div>
-        <div className="w-2/3 m-4 bg-purple-100">
-          <Outlet context={{ formData, handleFormDataChange }} />
+        <div className="w-4/5 md:w-2/3 m-4 bg-purple-100">
+         <Outlet context={{ formData, handleFormDataChange }} /> 
         </div>
       </div>
     </div>

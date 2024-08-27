@@ -1,4 +1,4 @@
-import { Link, useNavigate, useOutletContext } from "react-router-dom";
+import { useNavigate, useOutletContext } from "react-router-dom";
 import { useState } from "react";
 
 const PersonalInfo = () => {
@@ -50,8 +50,8 @@ const PersonalInfo = () => {
   return (
     <div className="w-full h-full bg-white relative flex flex-col">
       <div className="mx-8 mt-8">
-        <h1 className="text-4xl font-bold text-gray-900">Personal info</h1>
-        <p className="text-lg text-gray-400 mt-2">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">Personal info</h1>
+        <p className="text-base sm:text-lg  text-gray-400 mt-2">
           Please provide your name, email address, and phone number.
         </p>
 
@@ -110,7 +110,7 @@ const PersonalInfo = () => {
             {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
           </div>
 
-          <div className="absolute bottom-12 right-8">
+          <div className="absolute bottom-4 right-4 md:bottom-12 md:right-8">
             <button
               type="submit"
               className="px-6 py-2 bg-blue-900 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300"

@@ -1,6 +1,5 @@
-import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
-import { useOutletContext } from 'react-router-dom';
+import { useState, useEffect} from "react";
+import { useNavigate, Link, useOutletContext} from "react-router-dom";
 import { addonData } from "../utils/data";
 
 const AddOns = () => {
@@ -8,7 +7,13 @@ const AddOns = () => {
   const [selectedAddOns, setSelectedAddOns] = useState([]);
   const [warning, setWarning] = useState("");
   const navigate = useNavigate();
-
+  useEffect(() => {
+    // Initialize selectedAddOns state from formData
+    if (formData.selectedAddOns) {
+      setSelectedAddOns(formData.selectedAddOns);
+    }
+  }, [formData.selectedAddOns]);
+ 
   const handleCheckboxChange = (addon) => {
     setSelectedAddOns((prevSelected) => {
       if (prevSelected.includes(addon)) {
@@ -21,7 +26,7 @@ const AddOns = () => {
 
   const handleNextStep = () => {
     if (selectedAddOns.length === 0) {
-      setWarning("Please select at least one add-on before proceeding.");;
+      setWarning("Please select at least one add-on before proceeding.");
       return;
     }
     

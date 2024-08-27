@@ -6,10 +6,11 @@ import { Link, useNavigate } from "react-router-dom";
 import { useOutletContext } from "react-router-dom";
 
 const Plans = () => {
-    const [isYearly, setIsYearly] = useState(false);
-    const [selectedPlan, setSelectedPlan] = useState(null);
-    const [warning, setWarning] = useState("");
     const { formData, handleFormDataChange } = useOutletContext();
+    const [isYearly, setIsYearly] = useState(false);
+    const [selectedPlan, setSelectedPlan] = useState(formData);
+    const [warning, setWarning] = useState("");
+    
     const navigate = useNavigate();
 
     const handleSwitchChange = (event) => {
