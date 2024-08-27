@@ -5,6 +5,7 @@ import './index.css';
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import PersonalInfo from "./Components/PersonalInfo";
 import AddOns from "./Components/AddOns";
+import Summary from "./Components/Summary";
 
 function App() {
   const [formData, setFormData] = useState({
@@ -15,6 +16,9 @@ function App() {
     pMonthlyPrice: "",
     pYearlyPrice: "",
     isYearly : false,
+    aName:"",
+    aMonthlyPrice:"",
+    aYearlyPrice:"",
   });
 
   const handleFormDataChange = (data) => {
@@ -60,6 +64,10 @@ export const appRouter = createBrowserRouter([
       {
         path: "/addons",
         element: <AddOns/>,
+      },
+      {
+        path: "/summary",
+        element: <Summary/>,
       },
     ],
   },

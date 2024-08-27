@@ -18,7 +18,7 @@ const Plans = () => {
 
     const handlePlanSelect = (plan) => {
         setSelectedPlan(plan);
-        setWarning(""); // Clear warning message when a plan is selected
+        setWarning(""); 
     };
 
     const handleNextStep = () => {
@@ -29,7 +29,7 @@ const Plans = () => {
                 pYearlyPrice: selectedPlan.pYearlyPrice,
                 isYearly
             });
-            navigate("/addons"); // Replace with the actual route
+            navigate("/addons"); 
         } else {
             setWarning("Please select a plan before proceeding.");
         }
@@ -69,7 +69,7 @@ const Plans = () => {
                     <span className={`text-gray-700 ${isYearly ? 'font-bold' : 'text-gray-300'}`}>Yearly</span>
                 </div>
 
-                {warning && <p className="text-red-500 text-center mt-4">{warning}</p>} {/* Display warning message */}
+                {warning && <p className="text-red-500 text-center mt-4">{warning}</p>} 
             </div>
 
             <div className="p-4 rounded-lg flex items-center justify-between bg-white">
