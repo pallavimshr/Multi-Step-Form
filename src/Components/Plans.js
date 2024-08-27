@@ -74,7 +74,7 @@ const Plans = () => {
 
             <div className="p-4 rounded-lg flex items-center justify-between bg-white">
                 <Link to="/">
-                    <button className="bg-gray-200 text-gray-600 py-2 px-4 rounded">Go Back</button>
+                    <button className=" text-gray-400 font-semibold py-2 px-4 rounded">Go Back</button>
                 </Link>
                 <button
                     onClick={handleNextStep}

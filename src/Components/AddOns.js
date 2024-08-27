@@ -65,11 +65,11 @@ const AddOns = () => {
 
       <div className="p-4 flex flex-col md:flex-row justify-between bg-white space-y-2 md:space-y-0 md:space-x-2">
         <Link to="/plans" className="w-full md:w-auto">
-          <button className="w-full md:w-auto bg-gray-200 text-gray-600 py-2 px-4 rounded text-sm md:text-base">Go Back</button>
+          <button className="text-gray-400 font-semibold">Go Back</button>
         </Link>
         <button
           onClick={handleNextStep}
-          className="w-full md:w-auto px-6 py-2 bg-blue-900 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 text-sm md:text-base"
+          className="bg-blue-600 text-white py-2 px-4 rounded"
         >
           Next Step
         </button>
