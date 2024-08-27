@@ -17,6 +17,8 @@ const Summary = () => {
   };
 
   const totalPrice = calculateTotal();
+  const handleConfirm = () => {
+    alert('Your plan has been confirmed!'); };
 
   return (
     <div className="w-full h-full bg-white flex flex-col justify-between">
@@ -83,7 +85,8 @@ const Summary = () => {
           </button>
         </Link>
         
-          <button className="bg-blue-600 text-white py-2 px-4 rounded">
+          <button className="bg-blue-600 text-white py-2 px-4 rounded"
+          onClick={handleConfirm}>
             Confirm
           </button>
         

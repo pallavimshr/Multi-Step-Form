@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Sidebar from "./Components/Sidebar";
 import Plans from "./Components/Plans";
 import './index.css';
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { createBrowserRouter, Outlet } from "react-router-dom";
 import PersonalInfo from "./Components/PersonalInfo";
 import AddOns from "./Components/AddOns";
 import Summary from "./Components/Summary";
