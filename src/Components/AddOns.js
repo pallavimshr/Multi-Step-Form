@@ -6,6 +6,7 @@ import { addonData } from "../utils/data";
 const AddOns = () => {
   const { formData, handleFormDataChange } = useOutletContext();
   const [selectedAddOns, setSelectedAddOns] = useState([]);
+  const [warning, setWarning] = useState("");
   const navigate = useNavigate();
 
   const handleCheckboxChange = (addon) => {
@@ -20,7 +21,7 @@ const AddOns = () => {
 
   const handleNextStep = () => {
     if (selectedAddOns.length === 0) {
-      alert('Please select at least one add-on.');
+      setWarning("Please select at least one add-on before proceeding.");;
       return;
     }
     
@@ -29,7 +30,7 @@ const AddOns = () => {
   };
 
   return (
-    <div className="w-full h-full flex flex-col">
+    <div className="w-full h-full bg-white flex flex-col">
       <div className="mx-4 md:mx-8 mt-4 md:mt-8 flex-grow">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900">Pick add-ons</h1>
         <p className="text-base md:text-lg text-gray-400 mt-1 md:mt-2">Add-ons help enhance your gaming experience</p>
@@ -61,6 +62,7 @@ const AddOns = () => {
             </div>
           ))}
         </div>
+        {warning && <p className="text-red-500 text-center mt-4">{warning}</p>} 
       </div>
 
       <div className="p-4 flex flex-col md:flex-row justify-between bg-white space-y-2 md:space-y-0 md:space-x-2">

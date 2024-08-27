@@ -40,7 +40,7 @@ function App() {
         <div className="w-1/3 p-4 rounded-lg h-full">
           <Sidebar />
         </div>
-        <div className="w-2/3 m-4">
+        <div className="w-2/3 m-4 bg-purple-100">
           <Outlet context={{ formData, handleFormDataChange }} />
         </div>
       </div>

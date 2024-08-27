@@ -19,7 +19,7 @@ const Summary = () => {
   const totalPrice = calculateTotal();
 
   return (
-    <div className="w-full h-full flex flex-col justify-between">
+    <div className="w-full h-full bg-white flex flex-col justify-between">
      
       <div className="mx-8 mt-8">
         <h1 className="text-4xl font-bold text-gray-900">Finishing up</h1>
@@ -68,7 +68,7 @@ const Summary = () => {
       </div>
 
      
-      <div className="mx-8 my-4 p-4 ">
+      <div className="mx-2 my-4 p-4 ">
         <div className="flex justify-between items-center text-lg  text-gray-400">
           <p>Total ({formData.isYearly ? "per year" : "per month"})</p>
           <p className="text-xl font-bold text-blue-800">${totalPrice} {formData.isYearly ? "/yr" : "/mo"}</p>

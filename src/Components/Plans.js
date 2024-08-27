@@ -8,7 +8,7 @@ import { useOutletContext } from "react-router-dom";
 const Plans = () => {
     const [isYearly, setIsYearly] = useState(false);
     const [selectedPlan, setSelectedPlan] = useState(null);
-    const [warning, setWarning] = useState(""); // State for warning message
+    const [warning, setWarning] = useState("");
     const { formData, handleFormDataChange } = useOutletContext();
     const navigate = useNavigate();
 
@@ -36,7 +36,7 @@ const Plans = () => {
     };
     
     return (
-        <div className="w-full h-full flex flex-col">
+        <div className="w-full h-full bg-white flex flex-col">
             <div className="mx-8 mt-8 flex-1">
                 <h1 className="text-4xl font-bold text-gray-900">Select your plan</h1>
                 
